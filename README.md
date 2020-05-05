@@ -32,6 +32,12 @@ Calcular hasta la posición 250
 
 Tiempo tomado para completar la solicitud: **4 minutos con 3.60 segundos**
 
+Calcular hasta la posición 100 
+
+![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/7.%20Localhost_100_Sin_Memorizacion.png)
+
+Tiempo tomado para completar la solicitud: **54.09 s**
+
 ## Prueba en local con memorización
 
 Calcular hasta la posición 125 
@@ -52,13 +58,19 @@ Calcular hasta la posición 250
 
 Tiempo tomado para completar la solicitud: **305 ms**
 
+# Permitir el vencimineto de los datos en redis
 
-![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/7.%20Localhost_100_Sin_Memorizacion.png)
+Código para permitir el vencimiento de los datos
 
 ![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/8.%20Expiracion_10_S.png)
 
+Calcular hasta la posición 100 
+
 ![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/9.%20Localhost_100_Con_Expiracion_10.png)
 
+Tiempo tomado para completar la solicitud: **1 minuto 28.51 sesgundos**
+
+*Se puede apreciar que al vencer los datos es necesario más tiempo para recalcular y guardar esta información*
 
 # Azure
 
