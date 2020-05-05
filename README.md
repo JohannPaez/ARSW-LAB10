@@ -131,3 +131,12 @@ Tiempo tomado para completar la solicitud: **915 ms**
 
 Se puede comprobar que al memorizar los tiempos de respuesta se reducen drasticamente, tanto en las pruebas locales como en las de Azure.
 
+## Conclusiones
+
+Al memorizar información que no sea altamente volátil se pueden reducir la cantidad de consultas a la base de datos, permitiendo menos bloqueos de la base de datos y un mejor tiempo de respuesta.
+
+Con este laboratorio hemos visto que para un programa sencillo como lo es Fibonacci los tiempos varían significativamente, si escalamos estos tiempos a una aplicación real con miles o millones de transacciones significa que el usuario final no va a esperar por su contenido y que la carga que se tiene en procesamiento del servidor se va a ver reducida, al evitar calcular repetidamente la misma información.
+
+Esto puede ser de mucha relevancia cuando se quiere alcanzar tiempos específicos de respuesta, alcanzar algún atributo de calidad o para cumplir con especificaciones no funcionales de la aplicación.
+
+Vale la apena aclarar que memorizar o realizar el caché de la información no es para todo tipo de aplicación, es necesario planear y desarrollar las estrategias necesarias que permitan esto y analizar si toda o que parte de la información que se usa en la aplicación puede ser memorizada.
