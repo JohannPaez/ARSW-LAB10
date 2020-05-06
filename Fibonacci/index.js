@@ -22,7 +22,7 @@ async function fibonacciExists(nth) {
 
 async function getFibonacci(nth) {
     let key = generateKey(nth);
-    return await bigInt(client.getAsync(key));
+    return bigInt(await client.getAsync(key));
 }
 
 async function setFibonacci(nth, nthValue) {
