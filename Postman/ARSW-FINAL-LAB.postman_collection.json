@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "394aa445-3340-46d7-8147-91356cda058a",
+		"name": "ARSW-FINAL-LAB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ARSW-FINAL-LAB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nth\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rediswebapp.azurewebsites.net/api/Fibonacci",
+					"protocol": "https",
+					"host": [
+						"rediswebapp",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Fibonacci"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
