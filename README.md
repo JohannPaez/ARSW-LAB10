@@ -126,6 +126,35 @@ Calculado hasta la posición 1000
 
 Tiempo tomado para completar la solicitud: **915 ms**
 
+Calculado hasta la posición 1000 permitiendo el vencimiento de los valores almacenados
+
+![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/17.%20Azure_1000_Con_Expiracion_10.png)
+
+Tiempo tomado para completar la solicitud: **2 minutos 10.62 segundos**
+
+# Pruebas con Newman
+
+Se realiza una prueba para calcular hasta 100, se puede ver la reducción de tiempo en cada llamado debido a la memorización
+
+![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/18.%20Azure_100_Postman_Con_Expiracion_1.png)
+
+Se puede ver que los tiempos se reducen a medida que avanzan las solicitudes, hasta que el caché expiró y es necesario volver a calcular los valores, esto causa un aumento en el tiempo y posiblemente el error que se ve
+
+Adicionalmente se hace una prueba con un número muy grande, en este caso 7500
+
+![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/19.%20Azure_7500_Primer_Intento.png)
+
+Como se puede ver la solicitud falla, es demasiado trabajo para el servidor y el tiempo de respuesta, se recibe un error 502 que puede significar que el servidor esta sobrecargado.
+
+Volvemos a intentar 
+
+![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/20.%20Azure_7500_Segundo_Intento(Ya_tenia_cache).png)
+
+En esta ocasión si recibimos respuesta, debido a que los valores calculados en el anterior llamado han sido guardados en el caché y el procesamiento que debe hacer el servidor es menor, lo que evita la sobrecarga.
+
+Al final comprobamos el caché del servidor y comprobamos que tiene guardado el valor.
+
+![](https://github.com/JohannPaez/ARSW-LAB10/blob/master/Imagenes/21.%20Cache_Azure_7500.png)
 
 ## Análisis de resultados
 
